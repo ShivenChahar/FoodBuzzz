@@ -6,6 +6,9 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./screens/Login";
+import 'bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
@@ -17,6 +20,6 @@ function App() {
         </Routes>
       </div>
     </Router>
-  );
+  ); 
 }
 export default App;

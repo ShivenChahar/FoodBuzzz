@@ -5,10 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "NHaasGroteskDSPro-65Md";
+  font-family: "NHaasGroteskDSPro-65Md" !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.carousel-item img {
+  height: 400px !important;
+  /*width: 100% !important;*/    
 }
