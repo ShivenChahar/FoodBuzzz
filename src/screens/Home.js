@@ -26,14 +26,14 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="bg-secondary text-white" style={{ minHeight: "100vh"}}> {/* Iss line se mera home ka bg or sb color change honge */}
       <div> <Navbar /> </div>
       <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel"
         style={{ objectFit: "contain !important" }}>
         <div className="carousel-inner" id='carousel'>
           <div className="carousel-caption" style={{ zIndex: "10" }}>
             <div className="d-flex justify-content-center">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => { setSearch(e.target.value) }} />
               {/*<button className="btn btn-outline-success text-white bg-success" type="submit">Search</button>*/}
             </div>
           </div>
@@ -49,6 +49,10 @@ export default function Home() {
             <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&dpr=1
 " className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="pasta" />
           </div>
+          <div className="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80
+" className="d-block w-100" style={{ filter: "brightness(30%)" }} alt="salad" />
+          </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -58,37 +62,37 @@ export default function Home() {
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </button>
-        </div>
-        </div>
-        <div className='container'>
-          {
-            categoryData.length > 0
-              ? categoryData.map((data) => {
-                return (
-                  <div className="row mb-3"
-                  key={data._id}> 
+      </div>
+      </div>
+      <div className='container text-dark'>
+        {
+          categoryData.length > 0
+            ? categoryData.map((data) => {
+              return (
+                <div className="row mb-3"
+                  key={data._id}>
                   <div className="fs-3 m-3">
                     {data.CategoryName}
                   </div>
                   <hr />
-                  {foodData.length > 0 ? foodData.filter((item) => item.CategoryName === data.CategoryName && 
-                  item.name.toLowerCase().includes(search.toLowerCase())
-                )
-                .map((filterItems) => (
-                        <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
-                          <Card foodName={filterItems.name}
-                            options={filterItems.options[0]}
-                            imgSrc={filterItems.img} />
-                        </div>
-                      )) : <div> No Such Data Found </div>
+                  {foodData.length > 0 ? foodData.filter((item) => item.CategoryName === data.CategoryName &&
+                    item.name.toLowerCase().includes(search.toLowerCase())
+                  )
+                    .map((filterItems) => (
+                      <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
+                        <Card foodData={filterItems}
+                          options={filterItems.options[0]}
+                        />
+                      </div>
+                    )) : <div> No Such Data Found </div>
                   }
                 </div>
-                )
-              })
-              : "Loading..."
-          }
-        </div>
-        <div> <Footer /> </div>
+              )
+            })
+            : "Loading..."
+        }
       </div>
-    );
+      <div> <Footer /> </div>
+    </div>
+  );
 }

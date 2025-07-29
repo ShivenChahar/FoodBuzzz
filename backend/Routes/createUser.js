@@ -55,7 +55,13 @@ router.post("/loginUser", [
         }
       }
       const authToken = jwt.sign(data,jwtSecret)
-      return res.json({ success: true, authToken:authToken})
+        return res.json({ 
+        success: true, 
+        authToken: authToken,
+        email: userData.email,
+        name: userData.name
+      });
+
     } catch (error) {
       console.log(error)
       res.json({ success: false });

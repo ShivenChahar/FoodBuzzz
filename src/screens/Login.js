@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useSearchParams, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const [credentials, setcredentials] = useState({ email: "", password: "" })
@@ -23,7 +23,9 @@ let navigate = useNavigate()
       alert("Enter Valid Credentials")
     }
     if (json.success) {
+      localStorage.setItem("userEmail", credentials.email);
       localStorage.setItem("authToken", json.authToken);
+      localStorage.setItem("userEmail", json.email);
       console.log(localStorage.getItem("authToken"))
       navigate("/");
 
