@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import Badge from 'react-bootstrap/Badge';
 import Cart from '../screens/Cart';
 import Modal from '../Modal';
@@ -29,11 +29,11 @@ export default function Navbar() {
     ">Home</Link>
               </li>
 
-              {(localStorage.getItem("authToken")) ?
+              {/*{(localStorage.getItem("authToken")) ?
                 <li className="nav-item">
                   <Link className="nav-link active fs-5" aria-current="page" to="/">MyOrders</Link>
                 </li>
-                : ""}
+                : ""}*/}
             </ul>
             {(!localStorage.getItem("authToken")) ?
               <div className='d-flex'>
