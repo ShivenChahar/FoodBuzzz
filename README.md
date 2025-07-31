@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# 🍔 Food Buzzz – Online Food Ordering App  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Food Buzzz Banner](https://img.shields.io/badge/React-18.0.0-blue?logo=react) ![Node.js](https://img.shields.io/badge/Node.js-18.0.0-green?logo=node.js) ![MongoDB](https://img.shields.io/badge/MongoDB-6.0-brightgreen?logo=mongodb) ![Express](https://img.shields.io/badge/Express-4.x-black?logo=express)  
 
-## Available Scripts
+**Food Buzzz** is a full-stack **MERN (MongoDB, Express, React, Node.js)** web app designed to deliver a smooth online food ordering experience.  
+It features **real-time cart management, order tracking, authentication, and order history** for users — all in a **beautiful, modern UI**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🛍️ **For Users**
+- **Browse food categories & items** (dynamic menu from MongoDB).
+- **Add to Cart & Customize Quantities/Sizes** in real-time.
+- **User Authentication (Login/Register)** using JWT.
+- **Order Checkout & Storage** (MongoDB backend).
+- **View Past Orders** (with **dates and order breakdown**).
+- Fully responsive for **desktop, tablet, and mobile**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚙️ **For Developers**
+- **Clean, modular MERN stack** architecture.
+- **REST API** for authentication, orders, and menu.
+- **Protected routes** for sensitive endpoints.
+- **Context API & Reducer** for global state management.
+- Easy to **extend & deploy** (Heroku, Vercel, or AWS).
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖼️ Screenshots
 
-### `npm run build`
+### Home Page  
+![Home Page](./public/HomePage.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Cart System  
+![Cart](./public/MyCart.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+**Frontend:**  
+- React (Hooks + Context API)  
+- Bootstrap 5 + Custom CSS  
+- Material UI Icons  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Backend:**  
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose ODM)  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Authentication:**  
+- JSON Web Tokens (JWT)  
+- bcrypt for password hashing  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**State Management:**  
+- Context API + useReducer  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 Getting Started  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1️⃣ Clone the repo  
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+```
+### 2️⃣ Setup Backend
+```bash
+cd backend
+npm install
+# Add your MongoDB URI in .env
+npm start
+```
+### 3️⃣ Setup Frontend
+```bash
+cd ../frontend
+npm install
+npm start
+Open http://localhost:3000 in your browser.
+```
+### 🔥 Why You’ll Love It
+Fully functional: Works like a real food delivery app (cart, checkout, orders).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Production-ready codebase: Easy to deploy & customize.
 
-### Code Splitting
+Modern UI & UX: Clean, responsive, and interactive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Beginner-Friendly: Well-structured, easy to understand & extend.
 
-### Analyzing the Bundle Size
+### 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first
+to discuss what you’d like to change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 📜 License
+This project is licensed under the MIT License.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ⭐ Show Your Support
+If you like this project, give it a ⭐ on GitHub — it keeps me motivated!
