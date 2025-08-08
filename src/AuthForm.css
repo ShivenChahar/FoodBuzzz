@@ -1,0 +1,81 @@
+body, .auth-wrapper, .auth-card, input, label, button, a {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+.auth-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+label, .form-label, input, button, a {
+  color: #333;
+}
+.auth-card {
+  background: #fff;
+}
+
+label, input, button, a {
+  font-size: 1.1rem;
+}
+.auth-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #FFF3ED 40%, #FF6B35 100%);
+}
+
+.auth-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(255,107,53,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+  padding: 2.5rem 2rem;
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.auth-card h2 {
+  color: #FF6B35;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 9px;
+  border: 1px solid #FFD2B3;
+}
+
+.btn-success {
+  background: #FF6B35;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  transition: background 0.2s;
+}
+
+.btn-success:hover {
+  background: #ff813f;
+}
+
+.btn-danger {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+}

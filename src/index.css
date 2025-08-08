@@ -1,4 +1,45 @@
 :root {
+  --font-primary: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --line-height-base: 1.5;
+  --color-text: #2C2C2C;
+  --color-primary: #FF6B35; /* Brand orange */
+}
+
+body, input, button, select, textarea {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  margin: 0;
+}
+
+h1, .fs-1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+h2, .fs-2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+p, label, .text-base {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 1rem;
+}
+
+:root {
   /* Primary & Secondary */
   --color-primary: #FF6B35;       /* Vibrant Orange */
   --color-secondary: #F7931E;     /* Golden Orange */
@@ -101,4 +142,29 @@ code {
   justify-content: center;
   cursor: pointer;
   z-index: 1001;
+}
+/* Headings - larger and bold */
+h1, .fs-1 {
+  font-size: 34px !important;
+  font-weight: 700 !important;
+  color: #FF6B35 !important;  /* Brand orange for impact */
+  margin-bottom: 0.6rem !important;
+  line-height: 1.2 !important;
+}
+
+/* Secondary Headings */
+h2, .fs-2 {
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Paragraph and body text */
+p, body, .text-base {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  color: #444 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 1rem !important;
 }

@@ -1,6 +1,6 @@
 .card-custom {
   width: 18rem;
-  max-height: 360px;
+  max-height: none;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   overflow: hidden;
@@ -14,10 +14,13 @@
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 
+/* Make food item photo larger */
 .card-custom img {
-  height: 120px;
-  object-fit: cover;
-  width: 100%;
+  width: 100%;          /* Full width of card */
+  height: 200px !important;   /* Increase height from default (e.g., 120px) */
+  object-fit: cover;    /* Keep aspect ratio without distortion */
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .price-badge {
@@ -71,3 +74,8 @@
   right: 12px;
   font-size: 0.9rem;
 }
+.btn-add {
+  position: relative;
+  top: -8px; /* Moves button up by 8px */
+}
+
