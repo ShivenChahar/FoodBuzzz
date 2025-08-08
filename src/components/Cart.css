@@ -1,0 +1,82 @@
+/* Container */
+.cart-container {
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: var(--color-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Table styling */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-table thead {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.cart-table tbody tr:hover {
+  background-color: var(--color-bg-alt);
+}
+
+/* Status badge */
+.order-status {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-bg);
+}
+
+.status-delivered   { background-color: var(--color-success); }
+.status-pending     { background-color: var(--color-error); }
+.status-preparing   { background-color: var(--color-secondary); }
+
+/* Delete button */
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: var(--color-error);
+  cursor: pointer;
+}
+
+/* Checkout button */
+.btn-checkout {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-checkout:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Total price */
+.total-price {
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem;
+  color: var(--color-text);
+}
+
+.cart-table thead th {
+  color: var(--color-bg) !important;  /* White on the orange header */
+}

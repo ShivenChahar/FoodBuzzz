@@ -26,7 +26,14 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-secondary text-white" style={{ minHeight: "100vh"}}> {/* Iss line se mera home ka bg or sb color change honge */}
+  <div
+  className="text-dark"
+  style={{
+    minHeight: "100vh",
+    backgroundColor: "var(--color-bg-alt)",
+    color: "var(--color-text)"
+  }}> 
+  {/* Iss line se mera home ka bg or sb color change honge */}
       <div> <Navbar /> </div>
       <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel"
         style={{ objectFit: "contain !important" }}>

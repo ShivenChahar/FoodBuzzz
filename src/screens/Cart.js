@@ -2,6 +2,7 @@ import React from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../components/Cart.css';
 
 export default function Cart() {
   const data = useCart();
@@ -39,9 +40,9 @@ export default function Cart() {
   const totalPrice = data.reduce((total, food) => total + food.price, 0);
 
   return (
-    <div>
-      <div className="container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md">
-        <table className="table table-hover bg-dark">
+    <div className="cart-container">
+        <div className="table-responsive">
+        <table className="cart-table">
           <thead className="text-info fs-4">
             <tr>
               <th>#</th>
@@ -62,8 +63,7 @@ export default function Cart() {
                 <td>{food.price}</td>
                 <td>
                   <button
-                    type="button"
-                    className="btn p-0"
+                    type="button" className="btn-delete"
                     onClick={() => dispatch({ type: 'REMOVE', index })}
                   >
                     <DeleteIcon />
@@ -73,8 +73,8 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        <h1 className="fs-2 text-info">Total Price: {totalPrice}/-</h1>
-        <button className="btn bg-info mt-5" onClick={handleCheckOut}>
+        <div className="total-price">Total: ₹{totalPrice}/-</div>
+        <button className="btn-checkout" onClick={handleCheckOut}>
           Check Out
         </button>
       </div>
